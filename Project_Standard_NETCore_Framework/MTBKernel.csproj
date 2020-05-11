@@ -6,10 +6,10 @@
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <!--In Case of duplicate AssemblyInfo-->
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <OutputType>Exe</OutputType>
+    <!--<OutputType>Exe</OutputType>-->
   </PropertyGroup>
 
-  <!--Keep the same configuration in windows MTB-->
+  <!--Keep the same configuration in windows MTB for .NET Framework 4.6.1-->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net461' ">
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.30729</ProductVersion>
@@ -31,7 +31,7 @@
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
-    <!--<OutputType>Library</OutputType>-->
+    <OutputType>Library</OutputType>
     <RootNamespace>
     </RootNamespace>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
@@ -132,15 +132,11 @@
       <Name>System.XML</Name>
     </Reference>
   </ItemGroup>
-  <!--<Import Condition=" '$(TargetFramework)' == 'net461' " Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />-->
-  <!--<Import Project="..\..\BuildCommon.targets" Condition=" Exists('..\..\BuildCommon.targets') And '$(TargetFramework)' == 'net461' " />-->
-  <ItemGroup>
-    <Compile Include="Program.cs" />
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Tree.cs" />
-  </ItemGroup>
+  <Import Condition=" '$(TargetFramework)' == 'net461' " Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\BuildCommon.targets" Condition=" Exists('..\..\BuildCommon.targets') And '$(TargetFramework)' == 'net461' " />
+
+  
+  
 
   <!--Configuration for .NET STandard 2.0 and .NET Core 3.1-->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' " Label="Globals">
@@ -163,21 +159,22 @@
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
     <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
   </ItemGroup>
-  
-  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
-  </ItemGroup>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
-  </ItemGroup>-->
-
-  <ItemGroup>
+  <!--<ItemGroup>
     <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Project_Standard_1_6\Project_Standard_1_6.csproj" />
+  </ItemGroup>-->
+
+
+  <!--Configuration for All-->
+  <ItemGroup>
+    <Compile Include="MTBKernel.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tree.cs" />
   </ItemGroup>
-  
 </Project>
