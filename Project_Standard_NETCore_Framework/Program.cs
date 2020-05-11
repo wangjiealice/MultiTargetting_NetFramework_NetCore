@@ -1,5 +1,5 @@
 ﻿using Project_Standard16;
-//using Project_Standard20;
+using Project_Standard20;
 using System;
 
 namespace Project_Standard_NETCore_Framework
@@ -8,7 +8,7 @@ namespace Project_Standard_NETCore_Framework
     {
         static void Main(string[] args)
         {
-            //Standard20 standard20 = new Standard20() { };
+            Standard20 standard20 = new Standard20() { };
             Standard16 standard16 = new Standard16() { };
 
 #if NETSTANDARD2_0
@@ -20,7 +20,7 @@ namespace Project_Standard_NETCore_Framework
 #else
             Console.WriteLine("Unknown Target framework");
 #endif
-            //Console.WriteLine("Name is " + standard20.Name);
+            Console.WriteLine("Name is " + standard20.Name);
             Console.WriteLine("Name is " + standard16.Name);
 
             Console.ReadKey();

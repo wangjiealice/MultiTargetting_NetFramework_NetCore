@@ -163,23 +163,17 @@
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
     <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
   </ItemGroup>
-
-  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <ProjectReference Include="..\Project_Standard\Project_Standard.csproj" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
-    <Reference Include="Project_NETCore">
-      <HintPath>bin\Project_NETCore.dll</HintPath>
-    </Reference>
-  </ItemGroup>-->
   
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <ProjectReference Include="..\Project_Standard\Project_Standard.csproj" />
+  <!--<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <ProjectReference Include="..\Project_Standard\Project_Standard.csproj" />
+    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
   </ItemGroup>
 
   <ItemGroup>

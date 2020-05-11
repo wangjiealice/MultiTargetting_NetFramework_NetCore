@@ -7,11 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Framework", "Projec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_NETCore", "Project_NETCore\Project_NETCore.csproj", "{559DA2D0-69DA-450D-B768-5E70D7FB2588}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_Standard", "Project_Standard\Project_Standard.csproj", "{D957367F-4F60-4DE8-9CD1-C1CB4DA4D68B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_Standard_2_0", "Project_Standard\Project_Standard_2_0.csproj", "{D957367F-4F60-4DE8-9CD1-C1CB4DA4D68B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_Standard_NETCore_Framework", "Project_Standard_NETCore_Framework\Project_Standard_NETCore_Framework.csproj", "{357E9E00-9A2E-4A8F-A6B2-C46E534C6A53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MTBKernel", "Project_Standard_NETCore_Framework\MTBKernel.csproj", "{357E9E00-9A2E-4A8F-A6B2-C46E534C6A53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Standard_1_6", "Project_Standard_1_6\Project_Standard_1_6.csproj", "{02529519-D3F2-41F4-BCAD-F969CFEB4EE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project_Standard_1_6", "Project_Standard_1_6\Project_Standard_1_6.csproj", "{02529519-D3F2-41F4-BCAD-F969CFEB4EE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
