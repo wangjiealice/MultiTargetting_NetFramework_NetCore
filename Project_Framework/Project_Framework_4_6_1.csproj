@@ -58,6 +58,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>call "$(SolutionDir)BuildAllNETCoreMTB.cmd"</PostBuildEvent>
+    <PostBuildEvent>call "$(SolutionDir)BuildAllNETCoreMTB_Debug.cmd"</PostBuildEvent>
   </PropertyGroup>
 </Project>

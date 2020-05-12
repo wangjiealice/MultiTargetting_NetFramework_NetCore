@@ -8,5 +8,9 @@
     <ProjectReference Include="..\Project_Standard_NETCore_Framework\MTBKernel.csproj" />
   </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call &quot;$(SolutionDir)BuildAllNETFramework_Debug.cmd&quot;" />
+  </Target>
+
 
 </Project>
