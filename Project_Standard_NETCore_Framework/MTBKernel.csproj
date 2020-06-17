@@ -136,36 +136,24 @@
   <Import Project="..\..\BuildCommon.targets" Condition=" Exists('..\..\BuildCommon.targets') And '$(TargetFramework)' == 'net461' " />
 
 
-  <!--Configuration for .NET STandard 2.0 and .NET Core 3.1-->
+  <!--Configuration for .NET Standard 2.0 and .NET Core 3.1-->
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' " Label="Globals">
     <SccProjectName>SAK</SccProjectName>
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
   </PropertyGroup>
-
   <Target Condition=" '$(TargetFramework)' == 'netcoreapp3.1' " Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="IF NOT EXIST $(SolutionDir)..\binnetcore mkdir $(SolutionDir)..\binnetcore&#xD;&#xA;xcopy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)..\binnetcore&quot; /f /y" />
   </Target>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
     <Folder Include="MemoryMappedFile\" />
   </ItemGroup>
-
   <ItemGroup Condition=" '$(TargetFramework)' == 'netcoreapp3.1' ">
     <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
     <PackageReference Include="System.Net.Primitives" Version="4.3.0" />
   </ItemGroup>
-
-  <!--<ItemGroup>
-    <ProjectReference Include="..\Project_Standard\Project_Standard_2_0.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Project_Standard_1_6\Project_Standard_1_6.csproj" />
-  </ItemGroup>-->
-
 
   <!--Configuration for All-->
   <ItemGroup>
@@ -174,12 +162,4 @@
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
-
-<!--<ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
-    <Compile Include="MTBKernel.cs" />
-    <Compile Include="AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Tree.cs" />
-  </ItemGroup>-->
 </Project>
